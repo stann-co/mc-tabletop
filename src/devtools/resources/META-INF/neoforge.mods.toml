@@ -1,0 +1,12 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "tabletop_devtools"
+version = "1.0.0"
+displayName = "Tabletop Dev Tools"
+description = "Helpers for running the tabletop mod alongside the full modpack in dev runs. Never shipped."
+
+[[mixins]]
+config = "tabletop_devtools.mixins.json"

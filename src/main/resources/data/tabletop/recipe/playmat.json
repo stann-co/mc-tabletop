@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:green_carpet"
+    }
+  },
+  "result": {
+    "id": "tabletop:playmat",
+    "count": 3
+  }
+}

@@ -1,0 +1,77 @@
+// Playing cards, poker chips and a poker table for playing poker by hand.
+// Build with ".\gradlew build" (needs JAVA_HOME on a JDK 21; VS Code terminals in this folder set it, see
+// .vscode/settings.json), copy build/libs/tabletop-1.0.0.jar to the pack's mods/, then run packwiz refresh.
+// The versions below match the ones in the pack.
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+
+version = '1.0.0'
+base.archivesName = 'tabletop'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    maven {
+        url = 'https://maven.blamejared.com/'
+        content { includeGroup 'mezz.jei' }
+    }
+}
+
+// JEI's API, so JEI lists every card back theme. Only compiled against: JEI itself comes with the pack, and Tabletop
+// works without it.
+dependencies {
+    compileOnly 'mezz.jei:jei-1.21.1-neoforge-api:19.69.0.457'
+}
+
+// src/devtools is a small helper mod loaded only by the dev runs, to keep the full modpack runnable there.
+// It is never part of the built jar.
+sourceSets {
+    devtools
+}
+
+neoForge {
+    version = '21.1.264'
+    addModdingDependenciesTo sourceSets.devtools
+
+    mods {
+        tabletop {
+            sourceSet sourceSets.main
+        }
+        tabletop_devtools {
+            sourceSet sourceSets.devtools
+        }
+    }
+
+    // Each run gets its own folder so a server and two clients can run side by side for multiplayer tests.
+    // tools/sync-pack.ps1 fills them with the steam-n-punk-kingdom modpack; memory is sized for the full pack.
+    // tools/play.ps1 starts a whole session. With -Pjoin, clients connect straight to the server on this machine.
+    runs {
+        configureEach {
+            jvmArguments.addAll('-XX:+UseZGC', '-XX:+ZGenerational')
+        }
+        client {
+            client()
+            gameDirectory = file('run/client')
+            jvmArguments.add('-Xmx6G')
+            if (project.hasProperty('join')) {
+                programArguments.addAll('--quickPlayMultiplayer', 'localhost')
+            }
+        }
+        client2 {
+            client()
+            gameDirectory = file('run/client2')
+            programArguments.addAll('--username', 'Dev2')
+            jvmArguments.add('-Xmx6G')
+            if (project.hasProperty('join')) {
+                programArguments.addAll('--quickPlayMultiplayer', 'localhost')
+            }
+        }
+        server {
+            server()
+            gameDirectory = file('run/server')
+            jvmArguments.add('-Xmx4G')
+        }
+    }
+}

@@ -1,0 +1,6 @@
+# Which texture each tile of blocks.png is: column, row, file under src/main/resources/assets/tabletop/textures
+# Written by tools/TextureSheets.java pack; unpack reads it. Don't edit.
+grid 3 1
+0 0 block/poker_table_felt.png
+1 0 block/poker_table_wood.png
+2 0 block/playmat_trim.png

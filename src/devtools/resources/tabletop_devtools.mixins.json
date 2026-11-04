@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "co.stann.tabletop.devtools.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractRegistrateMixin",
+    "GameTestHooksMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

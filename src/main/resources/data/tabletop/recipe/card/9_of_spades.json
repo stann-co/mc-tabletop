@@ -1,0 +1,5 @@
+{
+  "type": "tabletop:card_cutting",
+  "ingredient": {"item": "tabletop:card_stock"},
+  "result": {"id": "tabletop:9_of_spades", "count": 1}
+}

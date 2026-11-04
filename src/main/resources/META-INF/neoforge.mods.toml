@@ -1,0 +1,38 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "MIT"
+
+[[mods]]
+modId = "tabletop"
+version = "1.0.0"
+displayName = "Tabletop"
+authors = "STANN.co"
+description = "Playing cards, poker chips and a poker table, for playing poker by hand with friends."
+
+[[mixins]]
+config = "tabletop.mixins.json"
+
+[[mixins]]
+config = "tabletop.common.mixins.json"
+
+[[dependencies.tabletop]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.tabletop]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+# Lists every card back theme in JEI when JEI is installed.
+[[dependencies.tabletop]]
+modId = "jei"
+type = "optional"
+versionRange = "[19,)"
+ordering = "NONE"
+side = "CLIENT"

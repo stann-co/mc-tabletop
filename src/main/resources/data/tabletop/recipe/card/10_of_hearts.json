@@ -1,0 +1,5 @@
+{
+  "type": "tabletop:card_cutting",
+  "ingredient": {"item": "tabletop:card_stock"},
+  "result": {"id": "tabletop:10_of_hearts", "count": 1}
+}

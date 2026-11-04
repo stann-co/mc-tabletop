@@ -1,0 +1,19 @@
+{
+  "values": {
+    "tabletop:chip_1": {
+      "value": 1
+    },
+    "tabletop:chip_5": {
+      "value": 5
+    },
+    "tabletop:chip_25": {
+      "value": 25
+    },
+    "tabletop:chip_100": {
+      "value": 100
+    },
+    "tabletop:chip_500": {
+      "value": 500
+    }
+  }
+}

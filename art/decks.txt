@@ -1,0 +1,19 @@
+# Which texture each tile of decks.png is: column, row, file under src/main/resources/assets/tabletop/textures
+# Written by tools/TextureSheets.java pack; unpack reads it. Don't edit.
+grid 8 2
+0 0 item/deck/white.png
+1 0 item/deck/orange.png
+2 0 item/deck/magenta.png
+3 0 item/deck/light_blue.png
+4 0 item/deck/yellow.png
+5 0 item/deck/lime.png
+6 0 item/deck/pink.png
+7 0 item/deck/gray.png
+0 1 item/deck/light_gray.png
+1 1 item/deck/cyan.png
+2 1 item/deck/purple.png
+3 1 item/deck/blue.png
+4 1 item/deck/brown.png
+5 1 item/deck/green.png
+6 1 item/deck/red.png
+7 1 item/deck/black.png

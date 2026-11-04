@@ -1,0 +1,11 @@
+# Which texture each tile of chips_and_tokens.png is: column, row, file under src/main/resources/assets/tabletop/textures
+# Written by tools/TextureSheets.java pack; unpack reads it. Don't edit.
+grid 5 2
+0 0 item/chip_1.png
+1 0 item/chip_5.png
+2 0 item/chip_25.png
+3 0 item/chip_100.png
+4 0 item/chip_500.png
+0 1 item/small_blind.png
+1 1 item/big_blind.png
+2 1 item/dealer_button.png

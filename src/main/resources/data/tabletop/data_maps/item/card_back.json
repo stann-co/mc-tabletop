@@ -1,0 +1,20 @@
+{
+  "values": {
+    "minecraft:white_dye": {"back": "tabletop:white"},
+    "minecraft:orange_dye": {"back": "tabletop:orange"},
+    "minecraft:magenta_dye": {"back": "tabletop:magenta"},
+    "minecraft:light_blue_dye": {"back": "tabletop:light_blue"},
+    "minecraft:yellow_dye": {"back": "tabletop:yellow"},
+    "minecraft:lime_dye": {"back": "tabletop:lime"},
+    "minecraft:pink_dye": {"back": "tabletop:pink"},
+    "minecraft:gray_dye": {"back": "tabletop:gray"},
+    "minecraft:light_gray_dye": {"back": "tabletop:light_gray"},
+    "minecraft:cyan_dye": {"back": "tabletop:cyan"},
+    "minecraft:purple_dye": {"back": "tabletop:purple"},
+    "minecraft:blue_dye": {"back": "tabletop:blue"},
+    "minecraft:brown_dye": {"back": "tabletop:brown"},
+    "minecraft:green_dye": {"back": "tabletop:green"},
+    "minecraft:red_dye": {"back": "tabletop:red"},
+    "minecraft:black_dye": {"back": "tabletop:black"}
+  }
+}

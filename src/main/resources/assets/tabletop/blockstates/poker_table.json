@@ -1,0 +1,13 @@
+{
+  "multipart": [
+    {"apply": {"model": "tabletop:block/poker_table_top"}},
+    {"when": {"north": "false"}, "apply": {"model": "tabletop:block/poker_table_rail", "uvlock": true}},
+    {"when": {"east": "false"}, "apply": {"model": "tabletop:block/poker_table_rail", "y": 90, "uvlock": true}},
+    {"when": {"south": "false"}, "apply": {"model": "tabletop:block/poker_table_rail", "y": 180, "uvlock": true}},
+    {"when": {"west": "false"}, "apply": {"model": "tabletop:block/poker_table_rail", "y": 270, "uvlock": true}},
+    {"when": {"north": "false", "west": "false"}, "apply": {"model": "tabletop:block/poker_table_leg"}},
+    {"when": {"north": "false", "east": "false"}, "apply": {"model": "tabletop:block/poker_table_leg", "y": 90}},
+    {"when": {"south": "false", "east": "false"}, "apply": {"model": "tabletop:block/poker_table_leg", "y": 180}},
+    {"when": {"south": "false", "west": "false"}, "apply": {"model": "tabletop:block/poker_table_leg", "y": 270}}
+  ]
+}

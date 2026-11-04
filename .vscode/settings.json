@@ -1,0 +1,11 @@
+{
+  // Gradle 9 and Minecraft 1.21.1 need Java 21; only Java 8 is on PATH. Use the JDK that Prism Launcher already has.
+  // Terminals opened in this workspace get it as JAVA_HOME, so ".\gradlew runServer" works there.
+  "terminal.integrated.env.windows": {
+    "JAVA_HOME": "C:\\Users\\jackc\\AppData\\Roaming\\PrismLauncher\\java\\java-runtime-delta"
+  },
+  // The Gradle side panel (Gradle for Java extension) runs Gradle with this JDK too.
+  "java.import.gradle.java.home": "C:\\Users\\jackc\\AppData\\Roaming\\PrismLauncher\\java\\java-runtime-delta",
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.compile.nullAnalysis.mode": "disabled"
+}
