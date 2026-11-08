@@ -1,13 +1,13 @@
 // Playing cards, poker chips and a poker table for playing poker by hand.
 // Build with ".\gradlew build" (needs JAVA_HOME on a JDK 21; VS Code terminals in this folder set it, see
-// .vscode/settings.json), copy build/libs/tabletop-1.0.0.jar to the pack's mods/, then run packwiz refresh.
+// .vscode/settings.json), copy build/libs/tabletop-<version>.jar to the pack's mods/, then run packwiz refresh.
 // The versions below match the ones in the pack.
 plugins {
     id 'java'
     id 'net.neoforged.moddev' version '2.0.148'
 }
 
-version = '1.0.0'
+version = mod_version
 base.archivesName = 'tabletop'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
@@ -74,4 +74,11 @@ neoForge {
             jvmArguments.add('-Xmx4G')
         }
     }
+}
+
+// Fills the version from gradle.properties into neoforge.mods.toml.
+tasks.named('processResources', ProcessResources) {
+    def props = [mod_version: mod_version]
+    inputs.properties props
+    filesMatching('META-INF/neoforge.mods.toml') { expand props }
 }

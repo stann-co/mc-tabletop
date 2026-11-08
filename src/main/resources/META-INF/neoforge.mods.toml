@@ -4,7 +4,7 @@ license = "MIT"
 
 [[mods]]
 modId = "tabletop"
-version = "1.0.0"
+version = "${mod_version}"
 displayName = "Tabletop"
 authors = "STANN.co"
 description = "Playing cards, poker chips and a poker table, for playing poker by hand with friends."
