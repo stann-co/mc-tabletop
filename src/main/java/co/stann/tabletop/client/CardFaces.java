@@ -21,9 +21,10 @@ import org.slf4j.Logger;
 /**
  * Decides when a card shows its back instead of its face, and which back, for every card in {@link TabletopApi#CARDS}.
  * A face-up card shows its face only to whoever may see it: in screens (your inventory, JEI, the deck screen), in your
- * own hands, and lying face-up on a table. Everywhere else in the world (other players' hands, dropped, in item frames
- * or on other mods' displays) it shows its back. A face-down card (say, taken from a face-down pile) shows its back
- * even to you, until you turn it over. Card stock is all back. Applied by {@code ItemRendererMixin}.
+ * own hands, lying face-up on a table, and on display (item frames and other mods' displays, which put it on show for
+ * everyone). Everywhere else in the world (other players' hands, dropped) it shows its back. A face-down card (say,
+ * taken from a face-down pile) shows its back even to you, until you turn it over, and so it does on display. Card
+ * stock is all back. Applied by {@code ItemRendererMixin}.
  *
  * <p>The back drawn is the card's back theme ({@link TabletopApi#backOf}): theme {@code ns:name} uses the model
  * {@code ns:models/item/card_back/name.json}, and a deck with that theme uses {@code ns:models/item/deck/name.json} as
@@ -83,9 +84,13 @@ public final class CardFaces {
         return model;
     }
 
-    /** Whether you may see a card's face: in screens and in your own hands. A table draws face-up cards as held by you. */
+    /**
+     * Whether you may see a card's face: in screens, in your own hands, and on display ({@code FIXED}, as item frames
+     * draw). A table draws face-up cards as held by you.
+     */
     private static boolean faceVisible(ItemDisplayContext context, @Nullable LivingEntity heldBy) {
-        return context == ItemDisplayContext.GUI || context.firstPerson() || heldBy != null && heldBy == Minecraft.getInstance().player;
+        return context == ItemDisplayContext.GUI || context == ItemDisplayContext.FIXED || context.firstPerson()
+                || heldBy != null && heldBy == Minecraft.getInstance().player;
     }
 
     /** The model for a stack's back theme, or the default theme's if it has none. */

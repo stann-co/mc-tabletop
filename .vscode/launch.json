@@ -12,11 +12,11 @@
       "projectName": "tabletop",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@D:\\projects\\Minecraft Modding\\casino\\build\\moddev\\clientRunProgramArgs.txt"
+        "@D:\\projects\\Minecraft Modding\\tabletop\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@D:\\projects\\Minecraft Modding\\casino\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dtabletop_devtools%%D:\\projects\\Minecraft Modding\\casino\\bin\\devtools;tabletop%%D:\\projects\\Minecraft Modding\\casino\\bin\\main"
+        "@D:\\projects\\Minecraft Modding\\tabletop\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dtabletop_devtools%%D:\\projects\\Minecraft Modding\\tabletop\\bin\\devtools;tabletop%%D:\\projects\\Minecraft Modding\\tabletop\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run\\client",
       "env": {},
@@ -34,11 +34,11 @@
       "projectName": "tabletop",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@D:\\projects\\Minecraft Modding\\casino\\build\\moddev\\client2RunProgramArgs.txt"
+        "@D:\\projects\\Minecraft Modding\\tabletop\\build\\moddev\\client2RunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@D:\\projects\\Minecraft Modding\\casino\\build\\moddev\\client2RunVmArgs.txt",
-        "-Dfml.modFolders\u003dtabletop_devtools%%D:\\projects\\Minecraft Modding\\casino\\bin\\devtools;tabletop%%D:\\projects\\Minecraft Modding\\casino\\bin\\main"
+        "@D:\\projects\\Minecraft Modding\\tabletop\\build\\moddev\\client2RunVmArgs.txt",
+        "-Dfml.modFolders\u003dtabletop_devtools%%D:\\projects\\Minecraft Modding\\tabletop\\bin\\devtools;tabletop%%D:\\projects\\Minecraft Modding\\tabletop\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run\\client2",
       "env": {},
@@ -56,11 +56,11 @@
       "projectName": "tabletop",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@D:\\projects\\Minecraft Modding\\casino\\build\\moddev\\serverRunProgramArgs.txt"
+        "@D:\\projects\\Minecraft Modding\\tabletop\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@D:\\projects\\Minecraft Modding\\casino\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dtabletop_devtools%%D:\\projects\\Minecraft Modding\\casino\\bin\\devtools;tabletop%%D:\\projects\\Minecraft Modding\\casino\\bin\\main"
+        "@D:\\projects\\Minecraft Modding\\tabletop\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dtabletop_devtools%%D:\\projects\\Minecraft Modding\\tabletop\\bin\\devtools;tabletop%%D:\\projects\\Minecraft Modding\\tabletop\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run\\server",
       "env": {},
